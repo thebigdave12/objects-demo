@@ -1,0 +1,79 @@
+// let person = {
+//     firstName: 'David',
+//     lastName: 'Bodine',
+//     age: 26,
+    
+//     favorites: {
+//         food: 'Wings',
+//         color: 'Azure',
+//         movies: {
+//             movie1: 'Logan',
+//             movie2: 'Lord of the Rings',
+//             movie3: 'V for Vendetta',
+//         },
+//         artists: ['Luke Chris', 'Half-Alive', 'The Killers']
+//     },
+
+//     greeting: function(name){
+//         return `Hi, ${name}`
+//     }
+// }
+
+// // console.log(person)
+
+// // console.log(person.favorites.movies.movie3)
+
+// // console.log(person.favorites.artists)
+
+// // console.log(person.greeting)
+
+// // person.favorites.color = 'green'
+
+// // console.log(person.favorites.color)
+// // console.log(person)
+
+// // person.favorites.artists.push('Greta Van Fleet') 
+
+// // console.log(person)
+
+// for (let baDaBoom in person){
+//     console.log(`The Current Property Is: ${baDaBoom}, and the current value is ${person[baDaBoom]}`)
+
+//     if(baDaBoom === 'favorites'){
+//         for (let daBaBoom in person[baDaBoom])
+//             console.log(`The nested property is ${daBaBoom}`)
+//     }
+// }
+
+class Animal {
+    constructor(name, size, isMammal){
+        this.name = name
+        this.size = size
+        this.isMammal = isMammal
+        this.deservesLove = true
+    }
+
+    greeting(){
+        console.log(`Hello, my name is ${this.name}, and I am very ${this.size}`)
+    }
+}
+
+class Dog extends Animal {
+    constructor (name, size, isMammal, species, isHairy){
+        super (name, size, isMammal)
+        
+        this.species = species
+        this.isHairy = isHairy
+    }
+
+}
+
+let ahsoka = new Dog('Ahsoka', 'large', true, 'lab', 'very')
+
+console.log(ahsoka)
+
+ahsoka.greeting()
+// let firstAnimal = new Animal('Roger', 'Big', true)
+
+// firstAnimal.greeting()
+
